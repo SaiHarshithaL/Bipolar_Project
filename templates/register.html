@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Register</title>
+   
+    <style>
+
+        .header {
+            background-color: rgba(211, 197, 188, 0.7); 
+            color: rgb(92, 74, 74);
+            text-align: center;
+            padding: 10px;
+        }
+        input[type=text],input[type=password],select {
+            width: 70%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+        .nav-button {
+            display: inline-block;
+            margin: 0 10px;
+            color:  rgb(92, 74, 74);
+            text-decoration: none;
+        }
+        .footer{
+            background-color: rgba(211, 197, 188, 0.7);  
+            color: rgb(92, 74, 74);
+            text-align: center;
+            box-shadow: 0px 5px 10px 0px #aaa;
+            width: 100%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 50px;
+        }
+    .form-box {
+        background-color: rgba(211, 197, 188, 0.7);
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .showcase-container{
+        background-image: url('/static/Flight.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .form-submit-button {
+        background: rgb(92, 74, 74);
+        color: white;
+        border-style: outset;
+        height: 40px;
+        width: 100px;
+        font: bold15px arial,sans-serif;
+        text-shadow: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Flight Ticket Booking System</h1>
+    <a class="nav-button" href="{{ url_for('index') }}">Home</a>
+</div>
+<div class="showcase-container">
+<div class="form-box">
+    <h2>Register</h2>
+    <form method="POST" action="/register">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+</div>
+<div class="footer">
+    <center><b>Have a safe and comfortable Journey</b></center>
+</div>
+
+</body>
+</html>
